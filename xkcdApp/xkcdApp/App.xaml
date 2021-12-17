@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xkcdApp.App">
+    <Application.Resources>
+        <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+               TargetType="{x:Type Button}"
+               x:Key="NavButtonTheme">
+
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+            
+        </Style>
+    </Application.Resources>
+</Application>
