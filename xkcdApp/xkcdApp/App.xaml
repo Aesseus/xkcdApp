@@ -3,7 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xkcdApp.App">
     <Application.Resources>
-        <Style BasedOn="{StaticResource {x:Type ToggleButton}}"
+
+        <Style x:Key="BaseButtonStyle" TargetType="Button" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="DarkCyan" />
+            <Setter Property="CornerRadius" Value="5" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button" ApplyToDerivedTypes="True" BasedOn="{StaticResource BaseButtonStyle}">
+            
+        </Style>
+        
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button" ApplyToDerivedTypes="True" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="BorderColor" Value="DarkCyan" />
+            <Setter Property="BorderWidth" Value="2" />
+            <Setter Property="BackgroundColor" Value="White" />
+        </Style>
+
+        <!--<Style BasedOn="{StaticResource {x:Type Button}}"
                TargetType="{x:Type Button}"
                x:Key="NavButtonTheme">
 
@@ -17,6 +34,6 @@
                 </Setter>
             </Style.Setters>
             
-        </Style>
+        </Style>-->
     </Application.Resources>
 </Application>

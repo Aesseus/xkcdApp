@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using xkcdApp.Core;
 
-namespace xkcdApp.ViewModels
+namespace xkcdApp.Views
 {
     public partial class MainPage : ContentPage
     {
