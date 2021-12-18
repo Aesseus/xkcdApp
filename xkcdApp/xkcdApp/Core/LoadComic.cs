@@ -24,6 +24,8 @@ namespace xkcdApp.Core
             {
                 url = "https://xkcd.com/info.0.json";
             }
+
+            
             /// This will open up a call/request offf our api client and wait for the response
             using (HttpResponseMessage response = await ApiHelper.HttpClient.GetAsync(url))
             {

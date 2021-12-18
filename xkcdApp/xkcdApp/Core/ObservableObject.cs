@@ -6,7 +6,7 @@ using System.Text;
 
 namespace xkcdApp.Core
 {
-    class ObserverbleObject : INotifyPropertyChanged
+    public class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

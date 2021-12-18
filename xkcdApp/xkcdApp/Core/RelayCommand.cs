@@ -10,10 +10,15 @@ namespace xkcdApp.Core
     //    private Action<object> execute;
     //    private Func<object, bool> canExecute;
 
-    //    public event EventHandler CanExecuteChanged
+    //    public event EventHandler CanExecuteChanged;
+    //    //{
+    //    //    add { CommandManager.RequerySuggested += value; }
+    //    //    remove { CommandManager.RequerySuggested -= value; }
+    //    //}
+
+    //    public bool CanExecute()
     //    {
-    //    add { CommandManager.RequerySuggested += value; }
-    //    remove { CommandManager.RequerySuggested -= value; }
+    //        CanExecuteChanged.Invoke()
     //    }
     //}
 }

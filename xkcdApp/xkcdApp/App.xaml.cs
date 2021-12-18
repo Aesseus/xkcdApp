@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using xkcdApp.Core;
 using xkcdApp.Views;
 
 namespace xkcdApp
@@ -10,8 +11,9 @@ namespace xkcdApp
         public App()
         {
             InitializeComponent();
+            ApiHelper.InitializeClient();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new ComicViewPage());
         }
 
         protected override void OnStart()

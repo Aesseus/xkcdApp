@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:xkcdApp.ViewModels"
+             x:Class="xkcdApp.Views.ComicViewPage"
+             Style="{StaticResource ContentPageStyle}"
+             Title="{Binding Path = ComicModel.Num, StringFormat='Comic #: {0}'}">
+    <ContentPage.BindingContext>
+        <viewmodels:ComicPageViewModel/>
+    </ContentPage.BindingContext>
+    <!--BackgroundColor="{StaticResource PageBackground}"-->
+    <ContentPage.Content>
+        <Grid RowDefinitions="*,50"
+              ColumnDefinitions="*,*">
+            <Image Source="{Binding ComicModel.Img}" 
+                   Grid.ColumnSpan="2"/>
+
+            <Button Text="Previous"
+                    Command="{Binding PreviousCommand}"
+                    Grid.Row="1"/>
+
+            <Button Text="Next"
+                    Command="{Binding NextCommand}"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
