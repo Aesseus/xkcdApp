@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace xkcdApp.Core
+namespace xkcdApp.Models
 {
     public class ComicModel
     {

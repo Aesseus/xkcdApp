@@ -6,6 +6,7 @@ using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
 using Xamarin.Forms;
 using xkcdApp.Core;
+using xkcdApp.Models;
 
 namespace xkcdApp.ViewModels
 {
