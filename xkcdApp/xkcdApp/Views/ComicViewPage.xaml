@@ -10,18 +10,23 @@
     <!--BackgroundColor="{StaticResource PageBackground}"-->
     <ContentPage.Content>
         <Grid RowDefinitions="*,50"
-              ColumnDefinitions="*,*">
+              ColumnDefinitions="*,*,*">
             <Image Source="{Binding ComicModel.Img}" 
-                   Grid.ColumnSpan="2"/>
+                   Grid.ColumnSpan="3"/>
 
             <Button Text="Previous"
                     Command="{Binding PreviousCommand}"
                     Grid.Row="1"/>
 
+            <Button Text="Home"
+                    Command="{Binding HomeCommand}"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
             <Button Text="Next"
                     Command="{Binding NextCommand}"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="2"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

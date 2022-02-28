@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using xkcdApp.ViewModels;
 
 namespace xkcdApp.Views
 {
@@ -15,8 +16,16 @@ namespace xkcdApp.Views
         public ComicViewPage()
         {
             InitializeComponent();
+        }
 
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
 
+            if (BindingContext is ComicPageViewModel comicPageViewModel)
+            {
+                await comicPageViewModel.Load();
+            }
         }
     }
 }

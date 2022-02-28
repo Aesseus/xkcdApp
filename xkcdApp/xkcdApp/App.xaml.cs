@@ -13,7 +13,7 @@ namespace xkcdApp
             InitializeComponent();
             ApiHelper.InitializeClient();
 
-            MainPage = new NavigationPage(new ComicViewPage());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
