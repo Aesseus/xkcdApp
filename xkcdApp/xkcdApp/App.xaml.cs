@@ -7,9 +7,13 @@ namespace xkcdApp
 {
     public partial class App : Application
     {
+        internal const string WEATHER_API_KEY = "";
+
         public App()
         {
             InitializeComponent();
+
+            Core.ApiHelper.InitializeClient();
 
             MainPage = new NavigationPage(new MainPage());
         }

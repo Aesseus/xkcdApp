@@ -14,7 +14,8 @@ namespace xkcdApp.Views
         public MainPage()
         {
             InitializeComponent();
-            ApiHelper.InitializeClient();
+            /// ApiHelper.InitializeClient();
+            BindingContext = new ViewModels.MainPageViewModel();
         }
     }
 }

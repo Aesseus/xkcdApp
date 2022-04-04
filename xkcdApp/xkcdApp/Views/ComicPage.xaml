@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xkcdApp.Views.ComicPage"
+             xmlns:vm="clr-namespace:xkcdApp.ViewModels"
+             x:DataType="vm:ComicPageViewModel"
+             Title="{Binding CurrentComicNumber, StringFormat='Current Number: {0}'}"
+             BackgroundColor="#272537">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="*, Auto">
+
+            <Image Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill" Source="{Binding ImageSource}" />
+
+            <Grid ColumnDefinitions="*, *" Grid.Row="1">
+                <Button Grid.Column="0" Text="&lt; Previous" Command="{Binding PreviousComicNumber}" Style="{StaticResource PrimaryButtonStyle}"/>
+                <Button Grid.Column="1" Text="Home" Command="{Binding LoadHome}" Style="{StaticResource PrimaryButtonStyle}"/>
+                <Button Grid.Column="2" Text="RandomComic" Command="{Binding RandomComicNumber}" Style="{StaticResource PrimaryButtonStyle}"/>
+                <Button Grid.Column="3" Text="Next &gt;" Command="{Binding NextComicNumber}" Style="{StaticResource PrimaryButtonStyle}"/>
+            </Grid>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

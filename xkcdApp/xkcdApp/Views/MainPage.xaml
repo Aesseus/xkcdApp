@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xkcdApp.Views.MainPage"
-             BackgroundColor="#272537">
+             BackgroundColor="#272537"
+             Title="Main Page">
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="{Binding SwitchView}" Command="{Binding }"  />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     
-    <!--<NavigationPage.TitleView>
+    <NavigationPage.TitleView>
         <Grid BackgroundColor="AliceBlue" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -19,19 +20,28 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
+        </Grid>
+    </NavigationPage.TitleView>
 
-            <Button Grid.Column="0" x:Name="previousImageButton" Text="Previous" VerticalOptions="Center" BackgroundColor="AliceBlue"/>
+    <StackLayout Orientation="Vertical" Spacing="12" VerticalOptions="Center">
+        
+        <Button Command="{Binding OpenComicCommand}" Text="Comic"  HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue"/>
+        
+    </StackLayout>
+</ContentPage>
+
+<!--<Button Grid.Column="0" x:Name="previousImageButton" Text="Previous" VerticalOptions="Center" BackgroundColor="AliceBlue"/>
             <Button Grid.Column="1" Text="Comic/Weather" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue"/>
             <Button Grid.Column="2" Text="Next" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue"/>
         </Grid>
     </NavigationPage.TitleView>-->
 
-    <Grid RowDefinitions="*, Auto">
+    <!--<Grid RowDefinitions="*, Auto">
 
         <Grid Grid.Row="1" BackgroundColor="AliceBlue" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <!--<ColumnDefinition Width="*"/>-->
+                --><!--<ColumnDefinition Width="*"/>--><!--
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -40,8 +50,9 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Column="0" x:Name="previousImageButton" Text="Previous" VerticalOptions="Center" BackgroundColor="AliceBlue"/>
-            <!--<Button Grid.Column="1" Text="Comic/Weather" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue"/>-->
+            --><!--<Button Grid.Column="1" Text="Comic/Weather" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue"/>--><!--
             <Button Grid.Column="1" Text="Next" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue"/>
         </Grid>
-    </Grid>
-</ContentPage>
+    </Grid>-->
+
+    

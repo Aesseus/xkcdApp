@@ -15,29 +15,38 @@ namespace xkcdApp.Core
         /// <returns></returns>
         public async Task<ComicModel> NextComic(int comicNumber = 0)
         {
-            string url = "";
-            if (comicNumber > 0)
+            try
             {
-                url = $"https://xkcd.com/{ comicNumber }/info.0.json";
-            }
-            else
-            {
-                url = "https://xkcd.com/info.0.json";
-            }
-            /// This will open up a call/request offf our api client and wait for the response
-            using (HttpResponseMessage response = await ApiHelper.HttpClient.GetAsync(url))
-            {
-                if (response.IsSuccessStatusCode)
+                string url = "";
+                if (comicNumber > 0)
                 {
-                    ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
-                    
-                    return comic;
+                    url = $"https://xkcd.com/{ comicNumber }/info.0.json";
                 }
                 else
                 {
-                    throw new Exception(response.ReasonPhrase);
+                    url = "https://xkcd.com/info.0.json";
+                }
+                /// This will open up a call/request offf our api client and wait for the response
+                using (HttpResponseMessage response = await ApiHelper.HttpClient.GetAsync(url))
+                {
+                    if (response.IsSuccessStatusCode)
+                    {
+                        ComicModel comic = await response.Content.ReadAsAsync<ComicModel>();
+
+                        return comic;
+                    }
+                    else
+                    {
+                        throw new Exception(response.ReasonPhrase);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Exception in NextComic: {ex}");
+            }
+
+            return null;
         }
     }
 }
