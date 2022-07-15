@@ -8,8 +8,8 @@
             <Setter Property="BackgroundColor" Value="DarkCyan" />
             <Setter Property="CornerRadius" Value="5" />
             <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        </Style>
-
+        </Style>  
+      
         <Style x:Key="PrimaryButtonStyle" TargetType="Button" ApplyToDerivedTypes="True" BasedOn="{StaticResource BaseButtonStyle}">
             
         </Style>
@@ -19,6 +19,14 @@
             <Setter Property="BorderWidth" Value="2" />
             <Setter Property="BackgroundColor" Value="White" />
         </Style>
+
+        <Style x:Key="PrimarySearchBar" TargetType="SearchBar">
+            <Setter Property="BackgroundColor" Value="DarkCyan"/>
+            <Setter Property="TextColor" Value="White"/>
+            
+            
+        </Style>
+        
 
         <!--<Style BasedOn="{StaticResource {x:Type Button}}"
                TargetType="{x:Type Button}"

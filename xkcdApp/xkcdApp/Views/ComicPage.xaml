@@ -5,14 +5,16 @@
              xmlns:vm="clr-namespace:xkcdApp.ViewModels"
              x:DataType="vm:ComicPageViewModel"
              Title="{Binding CurrentComicNumber, StringFormat='Current Number: {0}'}"
-             BackgroundColor="#272537">
+    BackgroundColor="#272537"> 
     <ContentPage.Content>
 
-        <Grid RowDefinitions="*, Auto">
+        <Grid RowDefinitions="Auto, *, Auto">
 
-            <Image Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill" Source="{Binding ImageSource}" />
+            <BoxView BackgroundColor="AntiqueWhite" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <SearchBar x:Name="Entry1" Grid.Row="0" Text="{Binding CurrentComicNumber, StringFormat='Current Number: {0}'}" Style="{StaticResource PrimarySearchBar}" Keyboard="Numeric"/>
+            <Image Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill" Source="{Binding ImageSource}" />
 
-            <Grid ColumnDefinitions="*, *" Grid.Row="1">
+            <Grid ColumnDefinitions="*, *" Grid.Row="2">
                 <Button Grid.Column="0" Text="&lt; Previous" Command="{Binding PreviousComicNumber}" Style="{StaticResource PrimaryButtonStyle}"/>
                 <Button Grid.Column="1" Text="Home" Command="{Binding LoadHome}" Style="{StaticResource PrimaryButtonStyle}"/>
                 <Button Grid.Column="2" Text="RandomComic" Command="{Binding RandomComicNumber}" Style="{StaticResource PrimaryButtonStyle}"/>

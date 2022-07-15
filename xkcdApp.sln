@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xkcdApp.Android", "xkcdApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xkcdApp.iOS", "xkcdApp\xkcdApp.iOS\xkcdApp.iOS.csproj", "{CBD7B841-16E0-41A2-9B97-C986865AF9F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xkcdApp", "xkcdApp\xkcdApp\xkcdApp.csproj", "{CD31FE51-33A2-4173-9447-8B7E19DDC1B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xkcdApp", "xkcdApp\xkcdApp\xkcdApp.csproj", "{CD31FE51-33A2-4173-9447-8B7E19DDC1B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

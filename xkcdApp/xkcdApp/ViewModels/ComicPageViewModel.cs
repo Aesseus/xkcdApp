@@ -11,8 +11,19 @@ namespace xkcdApp.ViewModels
     {
         private LoadComic _loadComic;
 
+        private bool _isBusy;
+
         private int _currentComicNumber = 1;
 
+        public bool IsBusy 
+        { 
+            get { return _isBusy; }
+            set 
+            {
+                _isBusy = value;
+                OnPropertyChanged();
+            }
+        }  
         public int CurrentComicNumber
         {
             get { return _currentComicNumber; }
@@ -22,12 +33,21 @@ namespace xkcdApp.ViewModels
                 OnPropertyChanged();
             }
         }
-
+        //public int GoToComic
+        //{
+        //    get { return _currentComicNumber; } 
+        //    set 
+        //    { 
+                
+        //    } 
+            
+        //}
+        
         public Command PreviousComicNumber { get; set; }
         public Command NextComicNumber { get; set; }
         Random rnd = new Random();
         public Command RandomComicNumber { get; set; }
-
+        //public Command GoToComic { get; set; }
         public Command LoadHome { get; set; }
         
         private string _imageSource;
@@ -42,15 +62,20 @@ namespace xkcdApp.ViewModels
             }
         }
 
+       // public object Entry1 { get; private set; }
+
         public ComicPageViewModel()
         {
             _loadComic = new LoadComic();
             LoadHome = new Command(() => App.Current.MainPage.Navigation.PushAsync(new MainPage()));
-
+          
             PreviousComicNumber = new Command(OnPreviousComicNumberPressed);
             NextComicNumber = new Command(OnNextComicNumberPressed);
 
             RandomComicNumber = new Command(OnRandomtComicNumberPressed);
+            
+            
+            
         }
 
         public void Initialize()
@@ -58,8 +83,16 @@ namespace xkcdApp.ViewModels
             PreviousComicNumber.Execute(null);
         }
 
-        
 
+        //private async void Entry1_TextChanged(object obj)
+        //{
+        //    CurrentComicNumber = int.Parse(Entry1.Text);
+        //    var result = await _loadComic.NextComic(CurrentComicNumber);
+        //    if (result != null)
+        //    {
+        //        ImageSource = result.Img;
+        //    }
+        //}
 
         private async void OnNextComicNumberPressed(object obj)
         {
@@ -85,6 +118,8 @@ namespace xkcdApp.ViewModels
                 ImageSource = result.Img;
             }
         }
+
+
 
         private async void OnPreviousComicNumberPressed(object obj)
         {
