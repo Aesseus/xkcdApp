@@ -22,7 +22,7 @@ namespace xkcdApp.Views
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-            Entry1.BindingContext = this;
+           // Entry1.BindingContext = this;
 
         }
 
@@ -38,17 +38,17 @@ namespace xkcdApp.Views
             base.OnDisappearing();
         }
 
-        private async void Entry1_TextChanged(object obj)
-        {
-            int CurrentComicNumber = 0;
-            LoadComic _loadComic = new LoadComic(); 
-            CurrentComicNumber = int.Parse(Entry1.Text);
-            var result = await _loadComic.NextComic(CurrentComicNumber);
-            //if (result != null)
-            //{
-            //    ImageSource = result.Img;
-            //}
-        }
+        //private async void Entry1_TextChanged(object obj)
+        //{
+        //    int CurrentComicNumber = 0;
+        //    LoadComic _loadComic = new LoadComic();
+        //    CurrentComicNumber = int.Parse(Entry1.Text);
+        //    var result = await _loadComic.NextComic(CurrentComicNumber);
+        //    //if (result != null)
+        //    //{
+        //    //    ImageSource = result.Img;
+        //    //}
+        //}
 
 
     }

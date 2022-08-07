@@ -11,7 +11,7 @@
         <Grid RowDefinitions="Auto, *, Auto">
 
             <BoxView BackgroundColor="AntiqueWhite" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-            <SearchBar x:Name="Entry1" Grid.Row="0" Text="{Binding CurrentComicNumber, StringFormat='Current Number: {0}'}" Style="{StaticResource PrimarySearchBar}" Keyboard="Numeric"/>
+            <SearchBar Grid.Row="0" Text="{Binding CurrentComicNumber, StringFormat='Current Number: {0}'}" Style="{StaticResource PrimarySearchBar}" Keyboard="Numeric"/>
             <Image Grid.Row="1" HorizontalOptions="Fill" VerticalOptions="Fill" Source="{Binding ImageSource}" />
 
             <Grid ColumnDefinitions="*, *" Grid.Row="2">
